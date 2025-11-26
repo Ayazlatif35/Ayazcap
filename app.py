@@ -13,6 +13,6 @@ if st.button("Search"):
     results = df[df["A"].astype(str).str.contains(search_name, case=False, na=False)]
     if results.empty:
         st.error("No matching records found.")
-         else:
+        else:
          st.success("Record found:")
          st.write(results[["A", "B", "C"]])
