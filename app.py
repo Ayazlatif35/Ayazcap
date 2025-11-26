@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
 import streamlit_authenticator as stauth
-
+git add requirements.txt
+git commit -m "Pin streamlit-authenticator to 0.3.2"
+git push
 st.set_page_config(page_title="Secure Name Search", layout="centered")
 
 usernames = ["user1", "user2", "user3", "user4"]
