@@ -44,21 +44,22 @@ credentials = {
 authenticator = stauth.Authenticate(
     names,
     usernames,
-   passwords = ["test123"]*4
+  import streamlit_authenticator as stauth
+
+usernames = ["user1", "user2", "user3", "user4"]
+names = ["User One", "User Two", "User Three", "User Four"]
+passwords = ["test123"]*4
+
 hashed_passwords = stauth.Hasher(passwords).generate()
+
 authenticator = stauth.Authenticate(
     names,
     usernames,
     hashed_passwords,
-    "some_cookie_name",
-    "some_signature_key",
+    "cookie_name",
+    "signature_key",
     cookie_expiry_days=30
 )
-    "some_cookie_name",
-    "some_signature_key",
-    cookie_expiry_days=30
-)
-
 authenticator = stauth.Authenticate(
     names,
     usernames,
