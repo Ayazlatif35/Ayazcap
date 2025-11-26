@@ -12,7 +12,11 @@ passwords = ["test123"] * 4  # or any list of passwords
 
 hasher = stauth.Hasher()  # No arguments
 
-hashed_passwords = [hasher.hash_password(p) for p in passwords]
+import streamlit_authenticator as stauth
+
+passwords = ["test123"]*4
+
+hashed_passwords = stauth.hasher.hash_passwords(passwords)
 
 
 authenticator = stauth.Authenticate(
