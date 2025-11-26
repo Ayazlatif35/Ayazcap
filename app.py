@@ -41,7 +41,7 @@ credentials = {
     }
 }
 
-authenticator = stauth.Authenticate(
+authenticator = stauth.Authenticate()
     names,
     usernames,
   import streamlit_authenticator as stauth
