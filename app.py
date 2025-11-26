@@ -32,7 +32,15 @@ import streamlit_authenticator as stauth
 
 passwords = ["test123"]*4
 
-hashed_passwords = stauth.Hasher.hash_passwords(passwords)
+credentials = {
+    "usernames": {
+        "user1": {"name": "User One", "password": "test123"},
+        "user2": {"name": "User Two", "password": "test123"},
+        "user3": {"name": "User Three", "password": "test123"},
+        "user4": {"name": "User Four", "password": "test123"}
+    }
+}
+
 authenticator = stauth.Authenticate(
     names,
     usernames,
