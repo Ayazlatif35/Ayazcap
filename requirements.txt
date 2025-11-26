@@ -1,5 +1,5 @@
 streamlit
 pandas
 openpyxl
-streamlit==1.32.0
-streamlit-authenticator==0.3.2
+streamlit
+streamlit-authenticator
