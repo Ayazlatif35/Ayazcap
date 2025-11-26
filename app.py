@@ -44,7 +44,7 @@ credentials = {
 authenticator = stauth.Authenticate(
     names,
     usernames,
-   passwords = ["test123"]*4
+   passwords = ["test123"]*4,
 hashed_passwords = stauth.Hasher(passwords).generate()
 
 authenticator = stauth.Authenticate(
