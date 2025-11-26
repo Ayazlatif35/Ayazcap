@@ -6,7 +6,14 @@ st.set_page_config(page_title="Secure Name Search", layout="centered")
 
 usernames = ["user1", "user2", "user3", "user4"]
 names = ["User One", "User Two", "User Three", "User Four"]
-hashed_passwords = stauth.Hasher(["test123"]*4).generate()
+import streamlit_authenticator as stauth
+
+hashed_passwords = stauth.Hasher([
+    "test123",
+    "pass456",
+    "hello789",
+    "admin321"
+]).generate()
 
 authenticator = stauth.Authenticate(
     names,
