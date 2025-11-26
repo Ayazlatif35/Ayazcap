@@ -20,6 +20,10 @@ import streamlit_authenticator as stauth
 
 passwords = ["test123"] * 4
 
+import streamlit_authenticator as stauth
+
+passwords = ["test123"] * 4
+
 hashed_passwords = stauth.Hasher(passwords).generate()
 
 authenticator = stauth.Authenticate(
