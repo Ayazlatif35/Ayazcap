@@ -6,15 +6,6 @@ st.set_page_config(page_title="Secure Name Search", layout="centered")
 
 
 
-authenticator = stauth.Authenticate(
-    names,
-    usernames,
-    hashed_passwords,
-    "demo_cookie",
-    "demo_key",
-    cookie_expiry_days=1
-)
-
 name, auth_status, username = authenticator.login("Login", "main")
 
 if auth_status is False:
