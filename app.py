@@ -28,8 +28,11 @@ import streamlit_authenticator as stauth
 
 passwords = ["test123"]*4
 
-hashed_passwords = stauth.Hasher(passwords).generate()
+import streamlit_authenticator as stauth
 
+passwords = ["test123"]*4
+
+hashed_passwords = stauth.Hasher.hash_passwords(passwords)
 authenticator = stauth.Authenticate(
     names,
     usernames,
