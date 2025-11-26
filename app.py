@@ -44,15 +44,17 @@ credentials = {
 authenticator = stauth.Authenticate(
     names,
     usernames,
-    credentials = {
-    "usernames": {
-        "user1": {"name": "User One", "password": "test123"},
-        "user2": {"name": "User Two", "password": "test123"},
-        "user3": {"name": "User Three", "password": "test123"},
-        "user4": {"name": "User Four", "password": "test123"},
-    }
-}
+   passwords = ["test123"]*4
+hashed_passwords = stauth.Hasher(passwords).generate()
 
+authenticator = stauth.Authenticate(
+    names,
+    usernames,
+    hashed_passwords,
+    "some_cookie_name",
+    "some_signature_key",
+    cookie_expiry_days=30
+)
     "some_cookie_name",
     "some_signature_key",
     cookie_expiry_days=30
